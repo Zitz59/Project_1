@@ -15,26 +15,3 @@ grid-template-areas:
   grid-gap: 10px;
   
 }
-
-.header {
-  grid-area: head;
-  background-color: darkslateblue;
-
-}
-.header img{
-  width: 40px;
-
-}
-
-.nav {
-  grid-area: nav;
-  background-color: darkslateblue;;
-
-}
-
-.content {
-  grid-area: cont;
-  background-color: hotpink;
-
-
-}

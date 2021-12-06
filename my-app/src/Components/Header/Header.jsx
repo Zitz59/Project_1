@@ -1,0 +1,10 @@
+import s from './Header.module.css';
+
+const Header = () => {
+	return <header className={s.header}>
+		<div className='logo'><img src="https://cdn-icons-png.flaticon.com/512/4542/4542046.png"></img></div>
+	</header>
+
+}
+
+export default Header;
