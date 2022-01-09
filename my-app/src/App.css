@@ -15,3 +15,10 @@ grid-template-areas:
   grid-gap: 10px;
   
 }
+
+  .app-wrapper-content {
+  
+  grid-area: cont;
+  background-color:teal;
+  
+}
