@@ -1,4 +1,11 @@
-.content {
-	grid-area: cont;
-	background-color:teal;
+.postsBlock {
+  padding: 10px;
+}
+
+.postButtons {
+  padding: 10px;
+}
+
+.posts {
+  margin-top: 10px;
 }
