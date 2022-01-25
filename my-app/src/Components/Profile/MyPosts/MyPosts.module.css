@@ -1,4 +1,5 @@
 .content {
 	grid-area: cont;
 	background-color:teal;
+	padding: 10px;
 }
