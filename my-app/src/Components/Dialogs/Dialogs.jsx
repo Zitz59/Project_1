@@ -16,8 +16,9 @@ const Message = (props) => {
   return <div className={s.dialog}>{props.message}</div>;
 };
 
+//Add massive with name and id's
 const Dialogs = (props) => {
-  let dialogsData = [
+  let dialogs = [
     { id: 1, name: "Gvidon" },
     { id: 2, name: "Saltan" },
     { id: 3, name: "Tkachiha" },
@@ -26,29 +27,27 @@ const Dialogs = (props) => {
     { id: 6, name: "Boss" },
     { id: 7, name: "Greek" },
   ];
-
-  let messagesData = [
+  // Add massive with messages
+  let messages = [
     { id: 1, message: "Hi!" },
     { id: 2, message: "Where is my money???" },
     { id: 3, message: "Miss you.....!" },
+    { id: 4, message: "You are welcome!" },
+    { id: 5, message: "Backdafuckup, the Onyx is here!" },
+    { id: 6, message: "Jerry was a race car driver...." },
+    { id: 7, message: "Come to ...." },
   ];
-
+  //Use .map method to dialogs massive
+  let dialogsElements = dialogs.map((dialog) => (
+    <Dialogitem name={dialog.name} id={dialog.id} />
+  ));
+  //Use map method to messages massive
+  let messagesElements = messages.map((m) => <Message message={m.message} />);
+  //Add new massive with data to components
   return (
     <div className={s.dialogs}>
-      <div className={s.dialogsItems}>
-        <Dialogitem name={dialogsData[0].name} id={dialogsData[0].id} />
-        <Dialogitem name={dialogsData[1].name} id={dialogsData[1].id} />
-        <Dialogitem name={dialogsData[2].name} id={dialogsData[2].id} />
-        <Dialogitem name={dialogsData[3].name} id={dialogsData[3].id} />
-        <Dialogitem name={dialogsData[4].name} id={dialogsData[4].id} />
-        <Dialogitem name={dialogsData[5].name} id={dialogsData[5].id} />
-        <Dialogitem name={dialogsData[6].name} id={dialogsData[6].id} />
-      </div>
-      <div className={s.messages}>
-        <Message message={messagesData[0].message} />
-        <Message message={messagesData[1].message} />
-        <Message message={messagesData[2].message} />
-      </div>
+      <div className={s.dialogsItems}>{dialogsElements}</div>
+      <div className={s.messages}>{messagesElements}</div>
     </div>
   );
 };

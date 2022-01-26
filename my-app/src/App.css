@@ -12,7 +12,6 @@ grid-template-areas:
 
   grid-template-rows:80px 1fr ;
   grid-template-columns: 2fr 8fr;
-  grid-gap: 10px;
   
 }
 
