@@ -1,41 +1,55 @@
-import React from 'react';
-import s from './Dialogs.module.css';
-const Dialogs = (props) => {
-	return (
-		<div className={s.dialogs}>
-			<div className={s.dialogsItems}>
-				<div className={s.dialog}>
-					Gvidon
-				</div>
-				<div className={s.dialog + ' ' + s.active}>
-					Saltan
-				</div>
-				<div className={s.dialog}>
-					Tkachiha
-				</div>
-				<div className={s.dialog}>
-					Povariha
-				</div>
-				<div className={s.dialog}>
-					Svatya Baba-Babariha
-				</div>
-				<div className={s.dialog}>
-					Boss
-				</div>
-				<div className={s.dialog}>
-					Greek
-				</div>
-			</div>
-			<div className={s.messages}>
-				<div className={s.message}>Hi</div>
-				<div className={s.message}>Where is my money???</div>
-				<div className={s.message}>Miss you.....</div>
-				<div className={s.message}></div>
-				<div className={s.message}></div>
-			</div>
-		</div>
-	)
-	
-}
+import React from "react";
+import s from "./Dialogs.module.css";
+import { NavLink } from "react-router-dom";
 
-export default Dialogs ;
+const Dialogitem = (props) => {
+  let path = "/dialogs/" + props.id;
+
+  return (
+    <div className={s.dialog + " " + s.active}>
+      <NavLink to={path}>{props.name}</NavLink>
+    </div>
+  );
+};
+
+const Message = (props) => {
+  return <div className={s.dialog}>{props.message}</div>;
+};
+
+//Add massive with name and id's
+const Dialogs = (props) => {
+  let dialogs = [
+    { id: 1, name: "Gvidon" },
+    { id: 2, name: "Saltan" },
+    { id: 3, name: "Tkachiha" },
+    { id: 4, name: "Povariha" },
+    { id: 5, name: "Batman" },
+    { id: 6, name: "Boss" },
+    { id: 7, name: "Greek" },
+  ];
+  // Add massive with messages
+  let messages = [
+    { id: 1, message: "Hi!" },
+    { id: 2, message: "Where is my money???" },
+    { id: 3, message: "Miss you.....!" },
+    { id: 4, message: "You are welcome!" },
+    { id: 5, message: "Backdafuckup, the Onyx is here!" },
+    { id: 6, message: "Jerry was a race car driver...." },
+    { id: 7, message: "Come to ...." },
+  ];
+  //Use .map method to dialogs massive
+  let dialogsElements = dialogs.map((dialog) => (
+    <Dialogitem name={dialog.name} id={dialog.id} />
+  ));
+  //Use map method to messages massive
+  let messagesElements = messages.map((m) => <Message message={m.message} />);
+  //Add new massive with data to components
+  return (
+    <div className={s.dialogs}>
+      <div className={s.dialogsItems}>{dialogsElements}</div>
+      <div className={s.messages}>{messagesElements}</div>
+    </div>
+  );
+};
+
+export default Dialogs;
