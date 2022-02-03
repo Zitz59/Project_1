@@ -1,20 +1,8 @@
 import React from "react";
 import s from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
-
-const Dialogitem = (props) => {
-  let path = "/dialogs/" + props.id;
-
-  return (
-    <div className={s.dialog + " " + s.active}>
-      <NavLink to={path}>{props.name}</NavLink>
-    </div>
-  );
-};
-
-const Message = (props) => {
-  return <div className={s.dialog}>{props.message}</div>;
-};
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 //Add massive with name and id's
 const Dialogs = (props) => {
@@ -39,7 +27,7 @@ const Dialogs = (props) => {
   ];
   //Use .map method to dialogs massive
   let dialogsElements = dialogs.map((dialog) => (
-    <Dialogitem name={dialog.name} id={dialog.id} />
+    <DialogItem name={dialog.name} id={dialog.id} />
   ));
   //Use map method to messages massive
   let messagesElements = messages.map((m) => <Message message={m.message} />);
