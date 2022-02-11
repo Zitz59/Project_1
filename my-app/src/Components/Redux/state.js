@@ -16,13 +16,48 @@ let state = {
       { id: 7, message: "Come to ...." },
     ],
     dialogs: [
-      { id: 1, name: "Gvidon" },
-      { id: 2, name: "Saltan" },
-      { id: 3, name: "Tkachiha" },
-      { id: 4, name: "Povariha" },
-      { id: 5, name: "Batman" },
-      { id: 6, name: "Boss" },
-      { id: 7, name: "Greek" },
+      {
+        id: 1,
+        name: "Gvidon",
+        avatar:
+          "https://images.generated.photos/tSejGSkqR9jNYheA_83j32i88BNeUB5ngs7U_iuSVKA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvMDBmMjU1/MzUtNzdkNy00NDcw/LWJiMWYtNDhlMDk2/YTkyZjhmLmpwZw.jpg",
+      },
+      {
+        id: 2,
+        name: "Saltan",
+        avatar:
+          "https://images.generated.photos/VPisMS5Ck8GZaYrdKHreA8enZaebUf4adQi1ijU7qTY/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvMjZmZDgx/MGUtZTdlMy00ZmVl/LWEwNWQtMjM1ZmU2/ODk2ODg1LmpwZw.jpg",
+      },
+      {
+        id: 3,
+        name: "Tkachiha",
+        avatar:
+          "https://images.generated.photos/DRfn1OkhXu_AcANTk_obkJkMobp_IEURaUTEtfXgcEg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvZDMzMmY4/ZjktYTFkYy00ODZh/LWJhOGYtMDc2NDY0/ODc4ZmNiLmpwZw.jpg",
+      },
+      {
+        id: 4,
+        name: "Povariha",
+        avatar:
+          "https://images.generated.photos/DpMfkVBPxCXeCXdmIQ4SIMQW1W_B3cs5Pv5TdDjLFow/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvYWQxMGYz/YjAtMDg3OC00ZWUx/LWE0ZGMtOGExOTMz/ZTBkYjY5LmpwZw.jpg",
+      },
+      {
+        id: 5,
+        name: "Batman",
+        avatar:
+          "https://images.generated.photos/oOILFtdy0xgGIYdy-Y77t34A7X0fPRCq-sHwZWjuuy0/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvN2FlMTc1/YTEtM2Q5OS00ZWQ4/LWI3ZmYtMDUwOGNk/Y2FlNmNkLmpwZw.jpg",
+      },
+      {
+        id: 6,
+        name: "Boss",
+        avatar:
+          "https://images.generated.photos/5bGSGubL0ZNhOc0XYnm9CQlII5SL_B6G-xsP1duXGe8/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvODI3Mzg5/MmQtOTcxOS00MTUx/LWEyYmUtNzBkOGI3/NTkzOGI4LmpwZw.jpg",
+      },
+      {
+        id: 7,
+        name: "Greek",
+        avatar:
+          "https://images.generated.photos/J2Mp46iKzYSgoMb9KFw445_3U-7sWJ0TAkpJWK4zMJQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvYjRjOTE2/ZDYtZmNhZC00YjVj/LWFkMzItMDAyZWM2/OTllY2M1LmpwZw.jpg",
+      },
     ],
   },
 };
