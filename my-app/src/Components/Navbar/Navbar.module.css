@@ -11,3 +11,7 @@
 .item .active {
   color: goldenrod;
 }
+
+.sidebar {
+  padding-top: 5em;
+}

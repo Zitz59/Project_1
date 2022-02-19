@@ -13,6 +13,7 @@ ReactDOM.render(
         posts={state.profilePage.posts}
         dialogs={state.dialogsPage.dialogs}
         messages={state.dialogsPage.messages}
+        sidebar={state.sidebar.sidebarItems}
       />
     </React.StrictMode>
   </BrowserRouter>,
