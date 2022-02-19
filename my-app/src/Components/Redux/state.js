@@ -60,6 +60,29 @@ let state = {
       },
     ],
   },
+  sidebar: {
+    sidebarItems: [
+      {
+        id: 1,
+        name: "Fedot",
+        avatar:
+          "https://images.generated.photos/tSejGSkqR9jNYheA_83j32i88BNeUB5ngs7U_iuSVKA/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvMDBmMjU1/MzUtNzdkNy00NDcw/LWJiMWYtNDhlMDk2/YTkyZjhmLmpwZw.jpg",
+      },
+      {
+        id: 2,
+        name: "Petro",
+        avatar:
+          "https://images.generated.photos/VPisMS5Ck8GZaYrdKHreA8enZaebUf4adQi1ijU7qTY/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvMjZmZDgx/MGUtZTdlMy00ZmVl/LWEwNWQtMjM1ZmU2/ODk2ODg1LmpwZw.jpg",
+      },
+
+      {
+        id: 3,
+        name: "Anna",
+        avatar:
+          "https://images.generated.photos/DRfn1OkhXu_AcANTk_obkJkMobp_IEURaUTEtfXgcEg/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvZDMzMmY4/ZjktYTFkYy00ODZh/LWJhOGYtMDc2NDY0/ODc4ZmNiLmpwZw.jpg",
+      },
+    ],
+  },
 };
 
 export default state;
