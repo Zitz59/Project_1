@@ -8,7 +8,6 @@ const Profile = (props) => {
       </div>
       <div>avatar + description</div>
       <div>
-        <ProfileInfo />
         <MyPosts posts={props.posts} />
       </div>
     </div>
