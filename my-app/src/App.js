@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
@@ -19,16 +18,29 @@ const App = (props) => {
           <Route
             path="/dialogs"
             element={
-              <Dialogs dialogs={props.dialogs} messages={props.messages} />
+              <Dialogs
+                dialogs={props.state.dialogsPage}
+                addMessage={props.addMessage}
+                updateNewMessageText={props.updateNewMessageText}
+              />
             }
           />
-          <Route path="/profile" element={<Profile posts={props.posts} />} />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                profilePage={props.state.profilePage}
+                addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}
+              />
+            }
+          />
           <Route path="/news" element={() => <News />} />
           <Route path="/music" element={() => <Music />} />
           <Route path="/settings" render={() => <Settings />} />
           <Route
             path="/friends"
-            element={<Friends sidebar={props.sidebarItems} />}
+            element={<Friends sidebar={props.state.sidebar} />}
           />
         </Routes>
       </div>

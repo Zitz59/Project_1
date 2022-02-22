@@ -1,0 +1,5 @@
+.descriptionBlock {
+  grid-area: cont;
+  background-color: darkslateblue;
+  padding: 10px;
+}
