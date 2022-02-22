@@ -1,9 +1,14 @@
+let rerenderEntireTree = () => {
+  console.log("State changed");
+};
+
 let state = {
   profilePage: {
     posts: [
       { id: 1, message: "Hello , world!", likeCount: 20 },
       { id: 2, message: "It's my first post!", likeCount: 15 },
     ],
+    newPostText: "something-wrong.com",
   },
   dialogsPage: {
     messages: [
@@ -15,6 +20,7 @@ let state = {
       { id: 6, message: "Jerry was a race car driver...." },
       { id: 7, message: "Come to ...." },
     ],
+
     dialogs: [
       {
         id: 1,
@@ -59,6 +65,7 @@ let state = {
           "https://images.generated.photos/J2Mp46iKzYSgoMb9KFw445_3U-7sWJ0TAkpJWK4zMJQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LmNvbmQvYjRjOTE2/ZDYtZmNhZC00YjVj/LWFkMzItMDAyZWM2/OTllY2M1LmpwZw.jpg",
       },
     ],
+    newMessageText: "write something",
   },
   sidebar: {
     sidebarItems: [
@@ -85,14 +92,43 @@ let state = {
   },
 };
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export const addPost = () => {
   let newPost = {
     id: 3,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likeCount: 0,
   };
 
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = "";
+  rerenderEntireTree(state);
+};
+
+export const updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+};
+
+export let sendMessage = () => {
+  let newMessage = {
+    id: 8,
+    message: state.dialogsPage.newMessageText,
+  };
+
+  state.dialogsPage.messages.push(newMessage);
+  state.dialogsPage.newMessageText = "";
+  rerenderEntireTree(state);
+};
+
+export const updateNewMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
+  rerenderEntireTree(state);
+};
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 };
 
 export default state;
